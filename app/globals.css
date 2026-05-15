@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+body {
+  @apply bg-zinc-900 h-full overflow-x-hidden;
+}
+
+html {
+  @apply h-full;
+}
+
+#__next {
+  @apply h-full;
+}

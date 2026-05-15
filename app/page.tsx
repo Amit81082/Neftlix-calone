@@ -1,8 +1,15 @@
+// app/page.tsx
 
-export default function Home() {
-  return (
-    <div className="h-screen text-amber-500 text-4xl">
-       Netflix Clone
-    </div>
-  );
+import serverAuth from "@/lib/serverAuth";
+import { redirect } from "next/navigation";
+import Home from "./home/page";
+
+export default async function Page() {
+  try {
+    const { currentUser } = await serverAuth();
+
+    return <Home />;
+  } catch {
+    redirect("/auth");
+  }
 }
