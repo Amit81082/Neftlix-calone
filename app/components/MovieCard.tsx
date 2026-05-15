@@ -13,7 +13,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
   const {onOpen} = useInfoModel();
   return (
-    <div className="group bg-zinc-900 col-span relative h-[12vw]">
+    <div className="group bg-zinc-900 col-span relative h-[12vw]" onClick={() => onOpen(data?.id)} >
       <img
         className="
           cursor-pointer
@@ -26,7 +26,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           sm:group-hover:opacity-0
           delay-300
           w-full
-          h-[12vw]
+          md:h-[12vw]
+          h-[14vw]
+
         "
         src={data?.thumbnailUrl}
         alt="Thumbnail"

@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-40">
-      <div className={`px-2 md:px-12  flex flex-row items-center  transition duration-500 ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}`}>
+      <div className={`px-2 md:px-12 flex flex-row items-center  transition duration-500 ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}`}>
         <img src="/images/logo.png" alt="Logo" className="h-16 lg:h-20" />
         <div className="hidden lg:flex flex-row ml-8 gap-7">
           <NavbarItem label="Home" />
@@ -53,14 +53,14 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMobileMenu}
-          className="lg:hidden flex flex-row items-center gap-2 ml-8 relative cursor-pointer"
+          className="lg:hidden flex flex-row items-center gap-2 ml-2 relative cursor-pointer"
         >
           <p className="text-white text-sm">Browse</p>
           <FaChevronDown className={`text-white transition ${showMobileMenu ? "rotate-180" : "rotate-0"}`} />
           <MobileMenu visible={showMobileMenu} />
         </div>
         {/* show search icon */}
-        <div className="flex flex-row ml-auto gap-7 items-center">
+        <div className="flex flex-row ml-auto gap-4 md:gap-6 items-center">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <IoSearch size={22} />
           </div>

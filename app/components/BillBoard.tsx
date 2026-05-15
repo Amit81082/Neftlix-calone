@@ -48,7 +48,7 @@ const BillBoard = () => {
             "
             onClick={handleOpenModal}
           >
-            <AiOutlineInfoCircle className="mr-1" />
+            <AiOutlineInfoCircle size={25} className="mr-1" />
             More Info
           </button>
         </div>
