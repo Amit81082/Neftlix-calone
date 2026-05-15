@@ -1,8 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import prismadb from "@/lib/prismadb";
 import serverAuth from "@/lib/serverAuth";
 
-export async function GET(req: Request, { params }: { params: { movieId: string } }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: Promise<{ movieId: string }> },
+) {
   try {
     // 👉 CHECK USER AUTH
     await serverAuth();
